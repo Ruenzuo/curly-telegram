@@ -41,4 +41,24 @@ dependencies {
         exclude(module: 'xercesImpl')
     }
     jenkinsPlugins 'org.jenkins-ci.plugins:cloudbees-folder:6.2.1'
+    jenkinsPlugins('org.jenkins-ci.plugins.workflow:workflow-aggregator:2.5') {
+        exclude(group: 'org.slf4j', module: 'slf4j-jdk14')
+    }
+    jenkinsPlugins 'org.jenkins-ci.plugins:credentials:2.1.16'
+    jenkinsPlugins 'org.jenkins-ci.plugins:branch-api:2.0.18'
+    jenkinsPlugins('com.sonyericsson.hudson.plugins.gerrit:gerrit-trigger:2.26.2') {
+        exclude(group: 'org.slf4j', module: 'slf4j-jdk14')
+    }
+    jenkinsPlugins 'org.jenkins-ci.plugins:git:3.7.0'
+    jenkinsPlugins 'org.jvnet.hudson.plugins:groovy-postbuild:2.3.1'
+    jenkinsPlugins 'org.jenkins-ci.plugins:naginator:1.17.2'
+    jenkinsPlugins 'org.jenkins-ci.plugins:groovy:2.0'
+    jenkinsPlugins('org.jenkins-ci.plugins:build-timeout:1.19') {
+        exclude(group: 'org.slf4j', module: 'slf4j-jdk14')
+    }
+    jenkinsPlugins 'org.jenkins-ci.plugins:ansicolor:0.5.2'
+    jenkinsPlugins 'org.jenkins-ci.plugins:timestamper:1.8.9'
+    jenkinsPlugins 'org.jenkins-ci.plugins:ws-cleanup:0.34'
+    jenkinsPlugins 'org.jenkins-ci.plugins:pipeline-build-step:2.7'
+    jenkinsPlugins 'org.jenkins-ci.plugins:token-macro:2.3'
 }
